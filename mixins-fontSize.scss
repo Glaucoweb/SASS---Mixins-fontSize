@@ -1,0 +1,13 @@
+
+// Função para calcular a unidade em "rem"
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+
+// Mixin do FontSize
+@mixin fontSize($size) {
+  font-size: $size; //valor em "px"
+  font-size: calculateRem($size);
+}
